@@ -32,8 +32,8 @@ export class EmployeeListComponent implements OnInit {
     }
   }
 
-  onItemClick(employee: Employee) {
-    this.employeeService.selectedEmployee = Object.assign({}, employee)
+  onItemClick(emp: Employee) {
+    this.employeeService.selectedEmployee = Object.assign({}, emp)
 
   }
 }
