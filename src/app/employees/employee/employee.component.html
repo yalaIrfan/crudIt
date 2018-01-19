@@ -1,0 +1,38 @@
+<form #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)">
+  <input type="hidden" class="" name="$key" #$key [(ngModel)]="employeeService.selectedEmployee.$key">
+  <div class="from-group">
+    <label>Name</label>
+    <input class="form-control" name="name" [(ngModel)]="employeeService.selectedEmployee.name" placeholder="Full name">
+  </div>
+  <div class="from-group">
+    <label>Position</label>
+    <input class="form-control" name="position" [(ngModel)]="employeeService.selectedEmployee.position" placeholder="Position">
+  </div>
+  <div class="from-group">
+    <label>Office</label>
+    <input class="form-control" name="office" [(ngModel)]="employeeService.selectedEmployee.office" placeholder="Office">
+  </div>
+  <div class="from-group">
+
+    <label>Salary</label>
+
+    <div class="input-group">
+      <div class="input-group-addon">
+        <i class="fa fa-dollar"></i>
+      </div>
+      <input class="form-control" name="salary" [(ngModel)]="employeeService.selectedEmployee.salary" placeholder="Salary">
+    </div>
+
+  </div>
+  <br/>
+  <div class="from-group">
+
+    <button type="submit" class="btn btn-info">
+      <i class="fa fa-floppy-o"></i> Submit</button>
+    <button (click)="onRecDel(employeeForm)" type="button" class="btn btn-info">
+      <i class="fa fa-trash"></i> Delete</button>
+    <button (click)="onReset(employeeForm)" type="button" class="btn btn-info">
+      <i class="fa fa-repeat"></i> Reset</button>
+  </div>
+
+</form>

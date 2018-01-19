@@ -1,0 +1,12 @@
+<ul class="list-group hover">
+  <li class="list-group-item" *ngFor="let emp of employeeList">
+    {{emp.name}} - {{emp.position}} -
+    <button (click)="onItemClick(emp)">
+      <i class="fa fa-pencil"></i>
+    </button>
+    -
+    <button (click)="onDelete(emp)">
+      <i class="fa fa-trash"></i>
+    </button>
+  </li>
+</ul>
